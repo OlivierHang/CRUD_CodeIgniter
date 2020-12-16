@@ -24,6 +24,7 @@
             <?php } ?>
         </tbody>
     </table>
+    <a href="<?php echo base_url() ?>/product/add_new">Ajout de produit</a>
 </body>
 
 </html>

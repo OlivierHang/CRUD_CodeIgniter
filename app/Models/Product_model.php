@@ -16,4 +16,9 @@ class Product_model extends Model
             return $this->getWhere(['product_id' => $id]);
         }
     }
+
+    public function saveProduct($data)
+    {
+        $this->db->table($this->table)->insert($data);
+    }
 }

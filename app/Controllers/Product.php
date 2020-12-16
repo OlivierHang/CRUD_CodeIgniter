@@ -13,4 +13,22 @@ class Product extends Controller
         $data['product'] = $model->getProduct();
         echo view('product_view', $data);
     }
+
+    public function add_new()
+    {
+        echo view('add_product_view');
+    }
+
+    public function save()
+    {
+        $model = new Product_model();
+        $data = array(
+            'product_name' => $this->request->getPost('nom_produit'),
+            'product_price' => $this->request->getPost('prix_produit')
+            // 'product_id' => $this->request->getPost('id_produit')
+        );
+
+        $model->saveProduct($data);
+        return redirect()->to(base_url() . '/product');
+    }
 }
