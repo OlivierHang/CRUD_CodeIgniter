@@ -21,7 +21,8 @@
                 <tr>
                     <td><?php echo $unproduit['product_name'] ?> </td>
                     <td><?php echo $unproduit['product_price'] ?> </td>
-                    <td><a href="<?php echo base_url() ?>/product/edit/<?php echo $unproduit['product_id'] ?>">edit</a></td>
+                    <td><a href="<?php echo base_url() ?>/product/edit/<?php echo $unproduit['product_id'] ?>">edit</a>
+                        <a href="<?php echo base_url() ?>/product/delete/<?php echo $unproduit['product_id'] ?>">delete</a></td>
                 </tr>
             <?php } ?>
         </tbody>

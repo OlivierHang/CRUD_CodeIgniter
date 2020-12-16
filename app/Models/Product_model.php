@@ -26,4 +26,9 @@ class Product_model extends Model
     {
         $this->db->table($this->table)->update($data, array('product_id' => $id));
     }
+
+    public function deleteProduct($id)
+    {
+        $this->db->table($this->table)->delete(array('product_id' => $id));
+    }
 }
