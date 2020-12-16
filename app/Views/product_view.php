@@ -13,6 +13,7 @@
             <tr>
                 <th>Nom</th>
                 <th>Prix</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +21,7 @@
                 <tr>
                     <td><?php echo $unproduit['product_name'] ?> </td>
                     <td><?php echo $unproduit['product_price'] ?> </td>
+                    <td><a href="<?php echo base_url() ?>/product/edit/<?php echo $unproduit['product_id'] ?>">edit</a></td>
                 </tr>
             <?php } ?>
         </tbody>

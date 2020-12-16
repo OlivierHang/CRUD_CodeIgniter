@@ -21,4 +21,9 @@ class Product_model extends Model
     {
         $this->db->table($this->table)->insert($data);
     }
+
+    public function updateProduct($data, $id)
+    {
+        $this->db->table($this->table)->update($data, array('product_id' => $id));
+    }
 }
